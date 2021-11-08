@@ -20,5 +20,45 @@ import java.util.*;
  */
 
 public class Controlador {
-    
+    public void ElectronicaLatinoamericana(){
+        try{
+            Vista interfaz = new Vista();
+            
+            interfaz.bienvenida();
+
+            boolean continuar = true;
+            int opcion_usuario = 0;
+
+            while(continuar){
+                opcion_usuario = interfaz.Menuprincipal();
+
+                switch (opcion_usuario) {
+                    //probar productos
+                    case 1:
+                        int producto = interfaz.productos();
+                        break;
+                
+                    //agregar producto al carrito
+                    case 2:
+                        
+                        break;
+
+                    //finalizar compra
+                    case 3:
+
+                        break;
+
+                    //salir
+                    default:
+                        interfaz.despedida();
+                        continuar = false;
+                        break;
+                }
+            }
+        }
+        catch(Exception e){
+            String s = "Controlador: "+e.getMessage();
+            throw new RuntimeException(s);
+        }
+    }
 }

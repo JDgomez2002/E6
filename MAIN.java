@@ -21,6 +21,13 @@ import java.util.*;
 
 public class MAIN {
     public static void main(String[] args) {
+        try{
+            Controlador simulador = new Controlador();
+            simulador.ElectronicaLatinoamericana();
+        }
+        catch(Exception e){
+            System.out.println("- Lo sentimos, ha ocurrido un error: "+e.getMessage());
+        }
         
     }
 }
