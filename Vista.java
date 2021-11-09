@@ -21,7 +21,6 @@ import java.time.LocalTime;
  */
 
 public class Vista {
-    private Scanner stringscan = new Scanner(System.in);
     private Scanner sn = new Scanner(System.in);
 
     /**
