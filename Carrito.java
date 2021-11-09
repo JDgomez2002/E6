@@ -20,11 +20,31 @@ import java.util.*;
  */
 public class Carrito {
     private ArrayList<Producto> carrito_compras = new ArrayList<Producto>();
+    private Producto[] productos_ordenados = null;
 
     public void ordenar_carrito(){
-        for(int k = 0; k<(this.carrito_compras.size()) ;k++){
-            
+        try{
+            if(!(this.carrito_compras.isEmpty())){
+                int longitud_array = this.carrito_compras.size();
+                Producto[] array_productos = new Producto[longitud_array];
+                for(int k = 0; k<longitud_array ;k++){
+                    array_productos[k] = this.carrito_compras.get(k);
+                }
+                Producto p = null;
+                for(int i = 0; i<longitud_array-1 ;i++){
+                    for(int j = 0; j<longitud_array-1 ;j++){
+                        p = array_productos[j];
+                        array_productos[j] = array_productos[j+1];
+                        array_productos[j+1] = p;
+                    }
+                }
+                this.productos_ordenados = array_productos;
+            }                
         }
+        catch(Exception e){
+            String s = "ordenar_carrito(): "+e.getMessage();
+            throw new RuntimeException(s);
+        }    
     }
 
     public String agregar_producto(Producto product){
@@ -49,6 +69,10 @@ public class Carrito {
             }
         }
         return producto_eliminado;
+    }
+
+    public Producto[] get_productos_ordenados(){
+        return this.productos_ordenados;
     }
 
 }

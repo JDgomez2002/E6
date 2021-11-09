@@ -24,6 +24,7 @@ public class Factura {
     private String fecha;
     private String no_factura;
     private int monto_total;
+    private Producto[] productos;
 
     public Factura(String[] datos){
         this.no_cliente = datos[0];
