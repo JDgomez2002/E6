@@ -28,10 +28,10 @@ public class Vista {
      * Metodo para solicitar un entero al usuario
      * se ingresan el numero minimo y maximo requerido
      * 
-     * @author José Daniel Gómez Cabrera
+     * @author Grupo 9
      * @version solicitar_int 1.1
      * @return int
-     * @param int,int
+     * @param String,int,int
      */
     private int solicitar_int(String s, int inferior, int superior){
         inferior -= 1;
@@ -65,7 +65,7 @@ public class Vista {
     /**
      * Metodo para solicitar string al usuario
      * 
-     * @author José Daniel Gómez Cabrera
+     * @author Grupo 9
      * @version solicitar_string 1.1
      * @return String
      */
@@ -98,7 +98,7 @@ public class Vista {
     /**
      * Bienvenida al usuario.
      * 
-     * @author José Daniel Gómez Cabrera
+     * @author Grupo 9
      * @version bienvenida 1.1
      */
     public void bienvenida(){
@@ -116,6 +116,13 @@ public class Vista {
         System.out.println();
     }
 
+    /**
+     * Menu principal para el usuario.
+     * 
+     * @author Grupo 9
+     * @version Menuprincipal 1.1
+     * @return int
+     */
     public int Menuprincipal(){
         boolean continuar = true;
         int desicion = 0;
@@ -138,6 +145,12 @@ public class Vista {
         return desicion;
     }
 
+    /**
+     * Menu de probar productos para el usuario.
+     * 
+     * @author Grupo 9
+     * @version productos 1.1
+     */
     public void productos(){
         boolean continuar = true;
         int desicion = 0;
@@ -214,6 +227,12 @@ public class Vista {
         }
     }
 
+    /**
+     * Menu para SmartPhones
+     * 
+     * @author Grupo 9
+     * @version MenuSmartphones 1.1
+     */
     private void MenuSmartphones(){
         boolean continuar = true;
         while(continuar){
@@ -629,7 +648,12 @@ private void MenuSmartwatch(){
 }
 }
 
-
+    /**
+     * Despedida para el usuario
+     * 
+     * @author Grupo 9
+     * @version despedida 1.1
+     */
 public void despedida(){
     System.out.println();
     System.out.println("\tSaliendo de Electronica Latinoamericana...");
