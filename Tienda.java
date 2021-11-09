@@ -175,12 +175,13 @@ public class Tienda {
     public void cerrar_tienda(){
         try{
             String file = "infoTienda.txt";
-            File myFile = new File(file);
-            // myFile.delete();
-            
+            String s = this.direccion+","+this.codigo_tienda+","+this.pais+","+this.ciudad;
+            FileWriter lapiz = new FileWriter(file);
+            lapiz.write(s);
+            lapiz.close();
         }
         catch(Exception e){
-            String s = "leer_info_tienfa(): "+e.getMessage();
+            String s = "cerrar_tienda(): "+e.getMessage();
             throw new RuntimeException(s);
         }
     }
