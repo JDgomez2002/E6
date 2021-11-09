@@ -635,6 +635,7 @@ public void despedida(){
     System.out.println("\t\tGracias por utilizar la Tienda Online...");
     System.out.println("\t\tEsperamos que vuelva pronto!!!");
     System.out.println();
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
 }
 
 }
