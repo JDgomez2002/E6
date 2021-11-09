@@ -20,6 +20,13 @@ import java.util.*;
  */
 
 public class Controlador {
+
+    /**
+     * Metodo para ejecutar la simulacion de la tienda
+     * 
+     * @author Grupo 9
+     * @version ElectronicaLatinoamericana 1.1
+     */
     public void ElectronicaLatinoamericana(){
         try{
             Vista interfaz = new Vista();
