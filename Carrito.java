@@ -33,9 +33,11 @@ public class Carrito {
                 Producto p = null;
                 for(int i = 0; i<longitud_array-1 ;i++){
                     for(int j = 0; j<longitud_array-1 ;j++){
-                        p = array_productos[j];
-                        array_productos[j] = array_productos[j+1];
-                        array_productos[j+1] = p;
+                        if((array_productos[j].get_precio())>(array_productos[j+1].get_precio())){
+                            p = array_productos[j];
+                            array_productos[j] = array_productos[j+1];
+                            array_productos[j+1] = p;
+                        }
                     }
                 }
                 this.productos_ordenados = array_productos;

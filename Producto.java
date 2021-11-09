@@ -28,4 +28,6 @@ interface Producto {
 
     String get_id();
 
+    int get_precio();
+
 }

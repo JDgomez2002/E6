@@ -75,4 +75,16 @@ public class Camara implements Producto{
     public String get_id(){
         return this.id;
     }
+
+    public int get_precio(){
+        int precio = 0;
+        try{
+            precio = Integer.parseInt(this.precio);
+        }
+        catch(Exception e){
+            String s = "get_precio(): "+e.getMessage();
+            throw new RuntimeException(s);
+        }
+        return precio;
+    }
 }
