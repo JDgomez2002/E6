@@ -71,24 +71,27 @@ public class Vista {
      */
     private String solicitar_string(){
         String txt = "";
-        try{
             boolean continuar = true;
             while(continuar){
+                try{
                 this.sn = new Scanner(System.in);
                 String texto = sn.nextLine();
                 if(texto.equals("")){
                     System.out.println("\t Error: debe de ingresar un texto valido.");
+                    System.out.println();
                 }
                 else{
                     txt = texto;
                     System.out.println("---------------------------------------------------------------------------------------------------------------------");
                     continuar = false;                   
                 }
+                }
+                catch(Exception e){
+                    System.out.println("\t Error: debe de ingresar un texto valido.");
+                    System.out.println();
+                }
             }
-        }
-        catch(Exception e){
-            System.out.println("\t Error: debe de ingresar un texto valido.");
-        }
+        
         return txt;
     }    
 
@@ -135,7 +138,7 @@ public class Vista {
         return desicion;
     }
 
-    public int productos(){
+    public void productos(){
         boolean continuar = true;
         int desicion = 0;
         while(continuar){
@@ -209,7 +212,6 @@ public class Vista {
         System.out.println();
         
         }
-        return desicion;
     }
 
     public void MenuSmartphones(){

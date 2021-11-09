@@ -35,7 +35,7 @@ public class Controlador {
                 switch (opcion_usuario) {
                     //probar productos
                     case 1:
-                        int producto = interfaz.productos();
+                        interfaz.productos();
                         break;
                 
                     //agregar producto al carrito
