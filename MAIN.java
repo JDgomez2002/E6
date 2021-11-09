@@ -10,8 +10,6 @@
 //Sección 11
 //Actividad: Ejercicio 6
 
-import java.util.*;
-
 /**
  * Clase MAIN
  * 
