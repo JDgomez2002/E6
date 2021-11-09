@@ -17,6 +17,7 @@
  * @version Camara Class 1.1
  */
 public class Camara implements Producto{
+    private String tipo_producto;
     private String id = "";
     private String precio = "";
     private String serie = "";
@@ -26,6 +27,7 @@ public class Camara implements Producto{
     private boolean portabilidad;
     
     public Camara(String[] datos){
+        this.tipo_producto = "Camara";
         this.id = datos[0];
         this.precio = datos[1];
         this.serie = datos[2];
@@ -41,13 +43,14 @@ public class Camara implements Producto{
     }
 
     public String[] to_String_producto(){
-        String[] datos = new String[6];
+        String[] datos = new String[7];
         datos[0] = this.id;
         datos[1] = this.precio;
         datos[2] = this.serie;
         datos[3] = this.marca;
         datos[4] = this.fecha_fabricacion;
         datos[5] = this.marcador_ar;
+        datos[6] = this.tipo_producto;
         return datos;
     }
 
@@ -65,5 +68,11 @@ public class Camara implements Producto{
         return s;
     }
 
+    public String get_tipo_producto(){
+        return this.tipo_producto;
+    }
 
+    public String get_id(){
+        return this.id;
+    }
 }

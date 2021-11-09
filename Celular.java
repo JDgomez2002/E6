@@ -20,6 +20,7 @@ public class Celular extends Telefono{
 
     public Celular(String[] datos){
         super(datos, true);
+        this.tipo_producto = "Celular";
     }
     
     public String llamar(){

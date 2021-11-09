@@ -24,4 +24,8 @@ interface Producto {
 
     boolean get_portabilidad();
 
+    String get_tipo_producto();
+
+    String get_id();
+
 }

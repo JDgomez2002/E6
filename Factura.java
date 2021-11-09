@@ -19,5 +19,39 @@ import java.util.*;
  * @version Factura Class 1.1
  */
 public class Factura {
-    
+    private String no_cliente;
+    private String nit;
+    private String fecha;
+    private String no_factura;
+    private int monto_total;
+
+    public Factura(String[] datos){
+        this.no_cliente = datos[0];
+        this.nit = datos[1];
+        this.fecha = datos[2];
+        this.no_factura = datos[3];
+        this.monto_total = set_monto(datos[4]);
+    }
+
+    private int set_monto(String monto_total){
+        int monto = 0;
+        try{
+            monto = Integer.parseInt(monto_total);
+        }
+        catch(Exception e){
+            String s = "Factura: set_monto() "+e.getMessage();
+            throw new RuntimeException(s);
+        }
+        return monto;
+    }
+
+    public String[] get_info_factura(){
+        String[] info = new String[5];
+        info[0] = this.no_cliente;
+        info[1] = this.nit;
+        info[2] = this.fecha;
+        info[3] = this.no_factura;
+        info[4] = Integer.toString(this.monto_total);  
+        return info;
+    }
 }

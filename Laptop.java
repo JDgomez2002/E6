@@ -21,6 +21,7 @@ public class Laptop extends SmartDevice{
     
     public Laptop(String[] datos){
         super(datos, true);
+        this.tipo_producto = "Laptop";
     }
 
     public String navegar_internet(){

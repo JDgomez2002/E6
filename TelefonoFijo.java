@@ -20,6 +20,7 @@ public class TelefonoFijo extends Telefono{
 
     public TelefonoFijo(String[] datos){
         super(datos, false);
+        this.tipo_producto = "Telefono Fijo";
     }
 
     public String llamar(){

@@ -20,6 +20,7 @@ public class Desktop extends SmartDevice{
 
     public Desktop(String[] datos){
         super(datos, false);
+        this.tipo_producto = "Desktop";
     }
 
     public String navegar_internet(){

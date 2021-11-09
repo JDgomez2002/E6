@@ -20,6 +20,7 @@ public class SmartPhone extends Telefono{
     
     public SmartPhone(String[] datos){
         super(datos, true);
+        this.tipo_producto = "SmartPhone";
     }
 
     public String tomar_foto(){

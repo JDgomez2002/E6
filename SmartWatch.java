@@ -20,6 +20,7 @@ public class SmartWatch extends Telefono{
     
     public SmartWatch(String[] datos){
         super(datos, true);
+        this.tipo_producto = "SmartWatch";
     }
 
     public String tomar_foto(){

@@ -20,6 +20,7 @@ public class SmartTV extends SmartDevice{
     
     public SmartTV(String[] datos){
         super(datos, false);
+        this.tipo_producto = "Smart TV";
     }
 
     public String navegar_internet(){

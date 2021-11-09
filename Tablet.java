@@ -20,6 +20,7 @@ public class Tablet extends SmartDevice{
     
     public Tablet(String[] datos){
         super(datos, true);
+        this.tipo_producto = "Tablet";
     }
 
     public String navegar_internet(){
