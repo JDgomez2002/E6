@@ -169,35 +169,35 @@ public class Vista {
                 break;
 
             case 2:
-
+                MenuTelCelular();
                 break;
 
             case 3:
-
+                MenuTelFijo();
                 break;
 
             case 4:
-
+                MenuCamara();
                 break;
 
             case 5:
-
+                MenuCompuDesk();
                 break;
 
             case 6:
-
+                MenuCompuLaptop();
                 break;
 
             case 7:
-
+                MenuTV();
                 break;
 
             case 8:
-
+                MenuTablet();
                 break;
 
             case 9:
-
+                MenuSmartwatch();
                 break;
         
             default:
@@ -276,75 +276,258 @@ public class Vista {
         boolean continuar = true;
         while(continuar){
         System.out.println("--------------------------------------------------------");
-        System.out.println("--------------------Bienvenidos------------------");
+        System.out.println("--------------------Telefonos Celulares------------------");
+        System.out.println("--------------------------------------------------------");
+        System.out.println("- Los Telefonos celulares sirven para muchas cosas...");
+        System.out.println("- Este no puede realizar muchas acciones...");
+        System.out.println("--------------------------------------------------------");
+        System.out.println(); //INFORMACION DEL PRODUCTO telefono.get_info
         System.out.println("--------------------------------------------------------");
         System.out.println("");
         System.out.println("¿Que acción desea ejecutar?");
         System.out.println("1. Hacer llamada");
-        System.out.println("2. Son portables");  
+        System.out.println("2. Salir"); 
+        System.out.println();
+        String s = "- Digite su desicion: ";
+        int cel = solicitar_int(s, 1, 2);
+        switch (cel) {
+            //hacer llamada
+            case 1:
+                System.out.print("Ingrese el numero para realizar la llamada: ");
+                String numero_tel = solicitar_string();
+                System.out.println("- Realizando llamada al numero "+numero_tel+"...");
+                System.out.println();
+            break;
+            //salir
+            default:
+                continuar = false;
+                System.out.println("\t\tVolviendo al Menu Principal...");
+            break;
     }
 }
+}
+
 public void MenuTelFijo(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Telefono Fijo------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- Los Telefonos celulares nos ayudan a comunucarnos...");
+    System.out.println("- Con otras personas, pero no realiza muchas acciones...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO telefono.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
+    System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
-    System.out.println("1. Hacer llamada");  
+    System.out.println("1. Hacer llamada");
+    System.out.println("2. Salir");
+    System.out.println();
+        String s = "- Digite su desicion: ";
+        int fij = solicitar_int(s, 1, 2);
+        switch (fij) {
+            //hacer llamada
+            case 1:
+            System.out.print("Ingrese el numero para realizar la llamada: ");
+            String numero_tel = solicitar_string();
+            System.out.println("- Realizando llamada al numero "+numero_tel+"...");
+            System.out.println();
+        break;
+        //salir
+        default:
+            continuar = false;
+            System.out.println("\t\tVolviendo al Menu Principal...");
+        break;
 }
+    }
 }
+
 public void MenuCamara(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Camara fotografica------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- La camara es un producto genial para tomar fotosgrafias...");
+    System.out.println("- Con otras personas, aparte reproduce videos puedes creer...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO camara.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
     System.out.println("1. Tomar Fotografía");
     System.out.println("2. Reproducir video");
-    System.out.println("3. Son portables");  
+    System.out.println("3. Salir");
+    String s = "- Digite su desicion: ";
+        int cam = solicitar_int(s, 1, 3);
+        switch (cam) {
+            //Tomar fotografia
+            case 1:
+                System.out.println();
+                System.out.println("- La camará esta tomando una foto.");
+                System.out.println();
+            break;
+
+            //Reproducir video
+            case 2:
+            System.out.println();
+            System.out.println("- La camará esta reproduciendo un video.");
+            System.out.println();
+            break;
+            //salir
+            default:
+            continuar = false;
+            System.out.println("\t\tVolviendo al Menu Principal...");
+            break;
+}
 }
 }
 public void MenuCompuDesk(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Computadora-Deskop------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- La computadora es una herramienta muy util para muchos...");
+    System.out.println("- Lo cual permite realizar tareas muy complicadas...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO computadora.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
     System.out.println("1. Navegar por internet");
     System.out.println("2. Reproducir video");
-    System.out.println("3. Ejecutar Videojuego");  
+    System.out.println("3. Ejecutar Videojuego");
+    System.out.println("4. Salir");
+    String s = "- Digite su desicion: ";
+    int com = solicitar_int(s, 1, 4);
+    switch (com) {
+        //Navegar
+        case 1:
+        System.out.print("Ingrese el link del sitio web a visitar: ");
+        String link = solicitar_string();
+        System.out.println("- Visitando la direccion web "+link+" desde mi Computadora-Deskop...");
+        System.out.println();
+        break;
+
+        //Reproducir video
+        case 2:
+        System.out.println();
+        System.out.println("- La coputadora esta reproduciendo un video.");
+        System.out.println();
+        break;
+
+        //Ejecutar videojuego
+        case 3:
+        System.out.print("Ingrese el Nombre el juego a ejecutar: ");
+        String juego = solicitar_string();
+        System.out.println("- Ejecutando el juego: "+juego+" desde mi Computadora-Deskop...");
+        System.out.println();
+        break;
+
+        //salir
+        default:
+        continuar = false;
+        System.out.println("\t\tVolviendo al Menu Principal...");
+        break;  
+}
 }
 }
 public void MenuCompuLaptop(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Computadora-Laptop------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- La camara es un producto genial para tomar fotosgrafias...");
+    System.out.println("- Con otras personas, aparte reproduce videos puedes creer...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO camara.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
     System.out.println("1. Navegar por internet");
     System.out.println("2. Ejecutar Videojuego");
     System.out.println("3. Reproducir video");
-    System.out.println("4. Son portables");  
+    System.out.println("4. Salir");
+    String s = "- Digite su desicion: ";
+    int coml = solicitar_int(s, 1, 4);
+    switch (coml) {
+        //Navegar
+        case 1:
+        System.out.print("Ingrese el link del sitio web a visitar: ");
+        String link = solicitar_string();
+        System.out.println("- Visitando la direccion web "+link+" desde mi Computadora-Laptop...");
+        System.out.println();
+        break;
+
+        //Ejecutar videojuego
+        case 2:
+        System.out.print("Ingrese el Nombre el juego a ejecutar: ");
+        String juego = solicitar_string();
+        System.out.println("- Ejecutando el juego: "+juego+" desde mi Computadora-Laptop...");
+        System.out.println();
+        break;
+
+        //Reproducir video
+        case 3:
+        System.out.println();
+        System.out.println("- La coputadora esta reproduciendo un video.");
+        System.out.println();
+        break;
+
+        //salir
+        default:
+        continuar = false;
+        System.out.println("\t\tVolviendo al Menu Principal...");
+        break;    
+}
 }
 }
 public void MenuTV(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Televisor------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- La televisión es un medio de comunicacion importante...");
+    System.out.println("- Nos mantiene comunicados de todo lo que pasa en el pais...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO tv.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
     System.out.println("1. Navegar por internet");
-    System.out.println("2. Reproducir video");  
+    System.out.println("2. Reproducir video");
+    System.out.println("3. Salir");
+    String s = "- Digite su desicion: ";
+    int tv = solicitar_int(s, 1, 3);
+    switch (tv) {
+        //Navegar
+        case 1:
+        System.out.print("Ingrese el link del sitio web a visitar: ");
+        String link = solicitar_string();
+        System.out.println("- Visitando la direccion web "+link+" desde mi Televisor...");
+        System.out.println();
+        break;
+
+        //Reproducir video
+        case 2:
+        System.out.println();
+        System.out.println("- El televisor esta reproduciendo un video.");
+        System.out.println();
+        break;
+        //salir
+        default:
+        continuar = false;
+        System.out.println("\t\tVolviendo al Menu Principal...");
+        break;    
+}
 }
 }
 
@@ -352,27 +535,95 @@ public void MenuTablet(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Tablet------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- Las tablets son dispositivos inteligentes con pantalla...");
+    System.out.println("- Enorme que ayuda a comunicarse con otras pesonas...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO tablet.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
     System.out.println("1. Tomar Fotografía");
     System.out.println("2. Navegar por internet");
     System.out.println("3. Reproducir video");
-    System.out.println("4. Son portables");  
+    System.out.println("4. Salir"); 
+    String s = "- Digite su desicion: ";
+    int ta = solicitar_int(s, 1, 4);
+    switch (ta) {
+        //Foto
+        case 1:
+                System.out.println();
+                System.out.println("- La tablet esta tomando una foto.");
+                System.out.println();
+        break;
+
+        //Navegar
+        case 2:
+        System.out.print("Ingrese el link del sitio web a visitar: ");
+        String link = solicitar_string();
+        System.out.println("- Visitando la direccion web "+link+" desde mi Tablet...");
+        System.out.println();
+        
+        break;
+
+        //Reproducir video
+        case 3:
+        System.out.println();
+        System.out.println("- La tablet esta reproduciendo un video.");
+        System.out.println();
+        break;
+
+        //salir
+        default:
+        continuar = false;
+        System.out.println("\t\tVolviendo al Menu Principal...");
+        break; 
+}
 }
 }
 public void MenuSmartwatch(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
-    System.out.println("--------------------Bienvenidos------------------");
+    System.out.println("--------------------Smartwatch------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("--------------------------------------------------------");
+    System.out.println("- Es un reloj inteligente que almacena mucha informacion...");
+    System.out.println("- Se dice que es una obra de arte con la que puedes...");
+    System.out.println("- Realizar muchas cosas...");
+    System.out.println("--------------------------------------------------------");
+    System.out.println(); //INFORMACION DEL PRODUCTO Smartwatch.get_info
     System.out.println("--------------------------------------------------------");
     System.out.println("");
     System.out.println("¿Que acción desea ejecutar?");
     System.out.println("1. Tomar Fotografía");
-    System.out.println("2. Son portables");
-    System.out.println("3. Hacer llamadas");  
+    System.out.println("2. Hacer llamadas");
+    System.out.println("3. Salir");
+    String s = "- Digite su desicion: ";
+    int sm = solicitar_int(s, 1, 3);
+    switch (sm) {
+        //Foto
+        case 1:
+                System.out.println();
+                System.out.println("- El Smartwatch esta tomando una foto.");
+                System.out.println();
+        break;
+
+        //llamada
+        case 2:
+            System.out.print("Ingrese el numero para realizar la llamada: ");
+            String numero_tel = solicitar_string();
+            System.out.println("- Realizando llamada al numero "+numero_tel+"...");
+            System.out.println();
+        break;
+        //salir
+        default:
+            continuar = false;
+            System.out.println("\t\tVolviendo al Menu Principal...");
+        break;  
+}
 }
 }
 
