@@ -297,6 +297,12 @@ public class Vista {
 }
     }
 
+    /**
+     * Menu de telefonos celulares.
+     * 
+     * @author Grupo 9
+     * @version MenuTelCelular 1.1
+     */
     private void MenuTelCelular(){
         boolean continuar = true;
         while(continuar){
@@ -780,8 +786,18 @@ public void producto_eliminado(){
     System.out.println();
 }
 
-private void mostrar_carrito(Carrito c){
+private void mostrar_carrito(Carrito c){ //ERROOOOOOOOOOOOOOOR
     Producto[] productos = c.get_productos_ordenados();
+    // for(int k = 0; k<productos.length ;k++){
+    //     System.out.println();
+    //     System.out.println("PRODUCTO "+(k+1));
+    //     String[] info = productos[k].to_String_producto();
+    //     System.out.println("- "+productos[k].get_tipo_producto()+" -");
+    //     for(int i = 0; i<info.length ;i++){
+    //         System.out.println(info[i]);
+    //     }
+    //     System.out.println();
+    // }
     if(!((productos==null)||(productos.length==0))){
         for(int k = 0; k<productos.length ;k++){
             System.out.println();
