@@ -1,0 +1,9 @@
+TEL1,200,SmartPhone,Samsung,10-09-2020,rrx
+TEL2,100,Celular,Nokia,05-06-2019,rrd
+TEL3,50,Telefono Fijo,Matel,11-09-2015,rrt
+CAM1,70,Camara Fotografica,Nikon,05-02-2010,rrg
+PC1,150,Computadora Desktop,Dell,18-10-2013,rrj
+PC2,160,Computadora Laptop,Asus,25-10-2014,rru
+TV1,200,Smart TV,LG,15-06-2021,rri
+TB1,50,Tablet,Apple,11-09-2019,rrp
+SW1,90,SmartWatch,Apple,16-12-2020,rrk

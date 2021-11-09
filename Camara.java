@@ -18,12 +18,12 @@
  */
 public class Camara implements Producto{
     private String tipo_producto;
-    private String id = "";
-    private String precio = "";
-    private String serie = "";
-    private String marca = "";
-    private String fecha_fabricacion = "";
-    private String marcador_ar = "";
+    private String id;
+    private String precio;
+    private String serie;
+    private String marca;
+    private String fecha_fabricacion;
+    private String marcador_ar;
     private boolean portabilidad;
     
     public Camara(String[] datos){
