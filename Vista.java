@@ -32,7 +32,7 @@ public class Vista {
      * @return int
      * @param String,int,int
      */
-    private int solicitar_int(String s, int inferior, int superior){
+    public int solicitar_int(String s, int inferior, int superior){
         inferior -= 1;
         superior += 1;
         int entero = 0;
@@ -68,11 +68,12 @@ public class Vista {
      * @version solicitar_string 1.1
      * @return String
      */
-    private String solicitar_string(){
+    public String solicitar_string(String s){
         String txt = "";
             boolean continuar = true;
             while(continuar){
                 try{
+                System.out.print(s);
                 this.sn = new Scanner(System.in);
                 String texto = sn.nextLine();
                 if(texto.equals("")){
@@ -122,22 +123,26 @@ public class Vista {
      * @version Menuprincipal 1.1
      * @return int
      */
-    public int Menuprincipal(){
+    public int Menuprincipal(Tienda t){
         boolean continuar = true;
         int desicion = 0;
         while(continuar){
         System.out.println("--------------------------------------------------------");
         System.out.println("-------------------- MENU PRINCIPAL ------------------");
         System.out.println("--------------------------------------------------------");
+        mostrar_info_tienda(t);
+        System.out.println("--------------------------------------------------------");
         System.out.println("");
         System.out.println("¿Que accion desea ejecutar?");
-        System.out.println("1. Probar y ver productos...");
-        System.out.println("2. Agregar producto al carrito...");
-        System.out.println("3. Finalizar Compra");
-        System.out.println("4. Salir");
+        System.out.println("1. Probar y ver productos");
+        System.out.println("2. Agregar producto al carrito");
+        System.out.println("3. Eliminar producto del carrito");
+        System.out.println("4. Finalizar Compra y generar factura");
+        System.out.println("5. Cambiar datos de Tienda");
+        System.out.println("6. Salir");
         System.out.println();
         String s = " Ingrese su desicion: ";
-        desicion = solicitar_int(s, 1, 4);
+        desicion = solicitar_int(s, 1, 6);
         System.out.println();
         continuar = false;
         }
@@ -164,9 +169,9 @@ public class Vista {
         System.out.println("");
         System.out.println("¿Que producto desea probar?");
         System.out.println("1. Smartphones (ID: TEL1)");
-        System.out.println("2. Teléfonos Celulares (ID: TEL2)");
-        System.out.println("3. Teléfonos fijos (ID: TEL3)");
-        System.out.println("4. Cámaras fotográficas (ID: CAM1)");
+        System.out.println("2. Telefonos Celulares (ID: TEL2)");
+        System.out.println("3. Telefonos fijos (ID: TEL3)");
+        System.out.println("4. Camaras fotograficas (ID: CAM1)");
         System.out.println("5. Computador Personal-Desktop (ID: PC1)");
         System.out.println("6. Computador Personal-Laptop (ID: PC2)");
         System.out.println("7. Smart TV (ID: TV1)");
@@ -255,8 +260,8 @@ public class Vista {
         switch (prueba) {
             //hacer llamada
             case 1:
-                System.out.print("Ingrese el numero para realizar la llamada: ");
-                String numero_tel = solicitar_string();
+                String s1 = "Ingrese el numero para realizar la llamada: ";
+                String numero_tel = solicitar_string(s1);
                 System.out.println("- Realizando llamada al numero "+numero_tel+"...");
                 System.out.println();
                 break;
@@ -270,8 +275,8 @@ public class Vista {
 
             //navegar 
             case 3:
-                System.out.print("Ingrese el link del sitio web a visitar: ");
-                String link = solicitar_string();
+                String s2 = "Ingrese el link del sitio web a visitar: ";
+                String link = solicitar_string(s2);
                 System.out.println("- Visitando la direccion web "+link+" desde mi SmartPhone...");
                 System.out.println();
                 break;
@@ -313,8 +318,8 @@ public class Vista {
         switch (cel) {
             //hacer llamada
             case 1:
-                System.out.print("Ingrese el numero para realizar la llamada: ");
-                String numero_tel = solicitar_string();
+                String s1 = "Ingrese el numero para realizar la llamada: ";
+                String numero_tel = solicitar_string(s1);
                 System.out.println("- Realizando llamada al numero "+numero_tel+"...");
                 System.out.println();
             break;
@@ -349,8 +354,8 @@ private void MenuTelFijo(){
         switch (fij) {
             //hacer llamada
             case 1:
-            System.out.print("Ingrese el numero para realizar la llamada: ");
-            String numero_tel = solicitar_string();
+            String s1 = "Ingrese el numero para realizar la llamada: ";
+            String numero_tel = solicitar_string(s1);
             System.out.println("- Realizando llamada al numero "+numero_tel+"...");
             System.out.println();
         break;
@@ -427,8 +432,8 @@ private void MenuCompuDesk(){
     switch (com) {
         //Navegar
         case 1:
-        System.out.print("Ingrese el link del sitio web a visitar: ");
-        String link = solicitar_string();
+        String s1 = "Ingrese el link del sitio web a visitar: ";
+        String link = solicitar_string(s1);
         System.out.println("- Visitando la direccion web "+link+" desde mi Computadora-Deskop...");
         System.out.println();
         break;
@@ -442,8 +447,8 @@ private void MenuCompuDesk(){
 
         //Ejecutar videojuego
         case 3:
-        System.out.print("Ingrese el Nombre el juego a ejecutar: ");
-        String juego = solicitar_string();
+        String s2 = "Ingrese el Nombre el juego a ejecutar: ";
+        String juego = solicitar_string(s2);
         System.out.println("- Ejecutando el juego: "+juego+" desde mi Computadora-Deskop...");
         System.out.println();
         break;
@@ -479,16 +484,16 @@ private void MenuCompuLaptop(){
     switch (coml) {
         //Navegar
         case 1:
-        System.out.print("Ingrese el link del sitio web a visitar: ");
-        String link = solicitar_string();
+        String s1 = "Ingrese el link del sitio web a visitar: ";
+        String link = solicitar_string(s1);
         System.out.println("- Visitando la direccion web "+link+" desde mi Computadora-Laptop...");
         System.out.println();
         break;
 
         //Ejecutar videojuego
         case 2:
-        System.out.print("Ingrese el Nombre el juego a ejecutar: ");
-        String juego = solicitar_string();
+        String s2 = "Ingrese el Nombre el juego a ejecutar: ";
+        String juego = solicitar_string(s2);
         System.out.println("- Ejecutando el juego: "+juego+" desde mi Computadora-Laptop...");
         System.out.println();
         break;
@@ -530,8 +535,8 @@ private void MenuTV(){
     switch (tv) {
         //Navegar
         case 1:
-        System.out.print("Ingrese el link del sitio web a visitar: ");
-        String link = solicitar_string();
+        String s1 = "Ingrese el link del sitio web a visitar: ";
+        String link = solicitar_string(s1);
         System.out.println("- Visitando la direccion web "+link+" desde mi Televisor...");
         System.out.println();
         break;
@@ -581,8 +586,8 @@ private void MenuTablet(){
 
         //Navegar
         case 2:
-        System.out.print("Ingrese el link del sitio web a visitar: ");
-        String link = solicitar_string();
+        String s1 = "Ingrese el link del sitio web a visitar: ";
+        String link = solicitar_string(s1);
         System.out.println("- Visitando la direccion web "+link+" desde mi Tablet...");
         System.out.println();
         
@@ -633,8 +638,8 @@ private void MenuSmartwatch(){
 
         //llamada
         case 2:
-            System.out.print("Ingrese el numero para realizar la llamada: ");
-            String numero_tel = solicitar_string();
+            String s1 = "Ingrese el numero para realizar la llamada: ";
+            String numero_tel = solicitar_string(s1);
             System.out.println("- Realizando llamada al numero "+numero_tel+"...");
             System.out.println();
         break;
@@ -662,5 +667,190 @@ public void despedida(){
     System.out.println();
     System.out.println("---------------------------------------------------------------------------------------------------------------------");
 }
+
+public String obtener_id(Carrito c){
+    System.out.println();
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    System.out.println("--- Agregar Producto al Carrito ---");
+    System.out.println("- Para agregar un producto al carrito ingrese su ID.");
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    System.out.println(" Smartphones (ID: TEL1)");
+    System.out.println(" Telefonos Celulares (ID: TEL2)");
+    System.out.println(" Telefonos fijos (ID: TEL3)");
+    System.out.println(" Camaras fotograficas (ID: CAM1)");
+    System.out.println(" Computador Personal-Desktop (ID: PC1)");
+    System.out.println(" Computador Personal-Laptop (ID: PC2)");
+    System.out.println(" Smart TV (ID: TV1)");
+    System.out.println(" Tablets (ID: TB1)");
+    System.out.println(" Smartwatch (ID: SW1)");
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    mostrar_carrito(c);
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    System.out.println();
+
+    ArrayList<String> ids = new ArrayList<String>();
+    ids.add("TEL1");
+    ids.add("TEL2");
+    ids.add("TEL3");
+    ids.add("CAM1");
+    ids.add("PC1");
+    ids.add("PC1");
+    ids.add("TV1");
+    ids.add("TB1");
+    ids.add("SW1");
+
+    String id = "";
+
+    boolean continuar = true;
+
+    while(continuar){
+        String s = "Ingrese el ID de su producto: ";
+        id = solicitar_string(s);
+        if(ids.contains(id)){
+            continuar = false;
+        }   
+        else{
+            System.out.println();
+            System.out.println("\t\tID no encontrado en los productos, por favor ingrese nuevamente...");
+            System.out.println();
+        }
+    }
+    return id;
+}
+
+public String obtener_id_eliminar(Carrito c){
+    System.out.println();
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    System.out.println("--- Eliminar Producto al Carrito ---");
+    System.out.println("- Para Eliminar un producto al carrito ingrese su ID.");
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    System.out.println(" Smartphones (ID: TEL1)");
+    System.out.println(" Telefonos Celulares (ID: TEL2)");
+    System.out.println(" Telefonos fijos (ID: TEL3)");
+    System.out.println(" Camaras fotograficas (ID: CAM1)");
+    System.out.println(" Computador Personal-Desktop (ID: PC1)");
+    System.out.println(" Computador Personal-Laptop (ID: PC2)");
+    System.out.println(" Smart TV (ID: TV1)");
+    System.out.println(" Tablets (ID: TB1)");
+    System.out.println(" Smartwatch (ID: SW1)");
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    mostrar_carrito(c);
+    System.out.println("---------------------------------------------------------------------------------------------------------------------");
+    System.out.println();
+
+    ArrayList<String> ids = new ArrayList<String>();
+    ids.add("TEL1");
+    ids.add("TEL2");
+    ids.add("TEL3");
+    ids.add("CAM1");
+    ids.add("PC1");
+    ids.add("PC1");
+    ids.add("TV1");
+    ids.add("TB1");
+    ids.add("SW1");
+
+    String id = "";
+
+    boolean continuar = true;
+
+    while(continuar){
+        String s = "Ingrese el ID del producto a eliminar: ";
+        id = solicitar_string(s);
+        if(ids.contains(id)){
+            continuar = false;
+        }   
+        else{
+            System.out.println();
+            System.out.println("\t\tID no encontrado en los productos, por favor ingrese nuevamente...");
+            System.out.println();
+        }
+    }
+    return id;
+}
+
+public void producto_agregado(){
+    System.out.println();
+    System.out.println("\tProducto agregado al carrito correctamente!");
+    System.out.println();
+}
+
+public void producto_eliminado(){
+    System.out.println();
+    System.out.println("\tProducto eliminado del carrito correctamente!");
+    System.out.println();
+}
+
+private void mostrar_carrito(Carrito c){
+    Producto[] productos = c.get_productos_ordenados();
+    if(!((productos==null)||(productos.length==0))){
+        for(int k = 0; k<productos.length ;k++){
+            System.out.println();
+            System.out.println("PRODUCTO "+(k+1));
+            String[] info = productos[k].to_String_producto();
+            System.out.println("- "+productos[k].get_tipo_producto()+" -");
+            for(int i = 0; i<info.length ;i++){
+                System.out.println(info[i]);
+            }
+            System.out.println();
+        }
+    }
+    else{
+        System.out.println();
+        System.out.println("\tLo sentimos, aun no tiene productos en su carrito...");
+        System.out.println();
+    }
+}
+
+public void volviendo_al_menu(){
+    System.out.println();
+    System.out.println("\tVolviendo al Menu...");
+    System.out.println();
+}
+
+public void generando_factura(){
+    System.out.println();
+    System.out.println("\tgenerando factura...");
+    System.out.println();
+}
+
+public void mostrar_factura(Factura f, Carrito c){
+    String[] datos = f.get_info_factura();
+    System.out.println();
+    System.out.println("- - FACTURACION - -");
+    for(int k = 0; k<datos.length ;k++){
+        System.out.println(datos[k]);
+    }
+    System.out.println();
+    mostrar_carrito(c);
+    System.out.println();
+}
+
+public String[] solicitar_datos_tienda(){
+    String[] datos = new String[4];
+    System.out.println();
+    System.out.println("--- Cambiar datos de tienda ---");
+    String s1 = "Ingrese la direccion de la tienda: ";
+    datos[0] = solicitar_string(s1);
+    String s2 = "Ingrese el codigo de la tienda: ";
+    datos[1] = solicitar_string(s2);
+    String s3 = "Ingrese el pais de la tienda: ";
+    datos[2] = solicitar_string(s3);
+    String s4 = "Ingrese la ciudad de ka tienda: ";
+    datos[3] = solicitar_string(s4);
+    System.out.println();
+    System.out.println("\tDatos de la tienda cambiados correctamente!!");
+    System.out.println();
+    return datos;
+
+}
+
+public void mostrar_info_tienda(Tienda t){
+    String[] info = t.get_info_tienda();
+    System.out.println("-- Informacion de la tienda --");
+    for(int k = 0; k<info.length ;k++){
+        System.out.println(info[k]);
+    }
+}
+
 
 }

@@ -136,7 +136,7 @@ public class Tienda {
     }
 
     public String agregar_producto(String s){
-        String nombre = "";
+        String nombre = null;
         try{
             Producto p = get_producto(s);
             if(!(p==null)){
@@ -208,5 +208,12 @@ public class Tienda {
 
     public Carrito get_carrito(){
         return this.carrito_compras;
+    }
+
+    public void escribir_datos_tienda(String[] datos){
+        datos[0] = this.direccion;
+        datos[1] = this.codigo_tienda;
+        datos[2] = this.pais;
+        datos[3] = this.ciudad;
     }
 }
