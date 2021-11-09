@@ -214,7 +214,7 @@ public class Vista {
         }
     }
 
-    public void MenuSmartphones(){
+    private void MenuSmartphones(){
         boolean continuar = true;
         while(continuar){
         System.out.println("--------------------------------------------------------");
@@ -274,7 +274,7 @@ public class Vista {
 }
     }
 
-    public void MenuTelCelular(){
+    private void MenuTelCelular(){
         boolean continuar = true;
         while(continuar){
         System.out.println("--------------------------------------------------------");
@@ -309,7 +309,7 @@ public class Vista {
 }
 }
 
-public void MenuTelFijo(){
+private void MenuTelFijo(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
@@ -345,7 +345,7 @@ public void MenuTelFijo(){
     }
 }
 
-public void MenuCamara(){
+private void MenuCamara(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
@@ -386,7 +386,7 @@ public void MenuCamara(){
 }
 }
 }
-public void MenuCompuDesk(){
+private void MenuCompuDesk(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
@@ -438,7 +438,7 @@ public void MenuCompuDesk(){
 }
 }
 }
-public void MenuCompuLaptop(){
+private void MenuCompuLaptop(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
@@ -490,7 +490,7 @@ public void MenuCompuLaptop(){
 }
 }
 }
-public void MenuTV(){
+private void MenuTV(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
@@ -533,7 +533,7 @@ public void MenuTV(){
 }
 }
 
-public void MenuTablet(){
+private void MenuTablet(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
@@ -585,7 +585,7 @@ public void MenuTablet(){
 }
 }
 }
-public void MenuSmartwatch(){
+private void MenuSmartwatch(){
     boolean continuar = true;
     while(continuar){
     System.out.println("--------------------------------------------------------");
