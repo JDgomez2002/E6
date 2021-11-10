@@ -11,6 +11,9 @@
 //Actividad: Ejercicio 6
 
 import java.util.*;
+
+import javax.sound.sampled.SourceDataLine;
+
 import java.time.LocalTime;
 
 /**
@@ -801,10 +804,10 @@ public String obtener_id_eliminar(Carrito c){
     ids.add("TEL3");
     ids.add("CAM1");
     ids.add("PC1");
-    ids.add("PC1");
     ids.add("TV1");
     ids.add("TB1");
     ids.add("SW1");
+    ids.add("PC2");
 
     String id = "";
 
@@ -854,16 +857,6 @@ public void producto_eliminado(){
      */
 private void mostrar_carrito(Carrito c){ //ERROOOOOOOOOOOOOOOR
     Producto[] productos = c.get_productos_ordenados();
-    // for(int k = 0; k<productos.length ;k++){
-    //     System.out.println();
-    //     System.out.println("PRODUCTO "+(k+1));
-    //     String[] info = productos[k].to_String_producto();
-    //     System.out.println("- "+productos[k].get_tipo_producto()+" -");
-    //     for(int i = 0; i<info.length ;i++){
-    //         System.out.println(info[i]);
-    //     }
-    //     System.out.println();
-    // }
     if(!((productos==null)||(productos.length==0))){
         for(int k = 0; k<productos.length ;k++){
             System.out.println();
@@ -911,15 +904,32 @@ public void generando_factura(){
      * @version mostrar_factura 1.1
      */
 public void mostrar_factura(Factura f, Carrito c){
-    String[] datos = f.get_info_factura();
-    System.out.println();
-    System.out.println("- - FACTURACION - -");
-    for(int k = 0; k<datos.length ;k++){
-        System.out.println(datos[k]);
+    if(!((f==null)&&(c==null))){
+        String[] datos = f.get_info_factura();
+        System.out.println();
+        System.out.println("- - FACTURACION - -");
+        for(int k = 0; k<datos.length ;k++){
+            System.out.println(datos[k]);
+        }
+        System.out.println();
+        mostrar_carrito(c);
+        System.out.println();
     }
-    System.out.println();
-    mostrar_carrito(c);
-    System.out.println();
+    else{
+        System.out.println();
+        System.out.println("\tLo sentimos, aun no tienes productos en tu carrito...");
+        System.out.println("\tAgrega productos a tu carrito para facturar!");
+        System.out.println();
+    }
+}
+
+public void mostrar_factura(){
+
+        System.out.println();
+        System.out.println("\tLo sentimos, aun no tienes productos en tu carrito...");
+        System.out.println("\tAgrega productos a tu carrito para facturar!");
+        System.out.println();
+
 }
     /**
      * Metodo para solicitar datos a  tienda

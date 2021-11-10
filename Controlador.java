@@ -71,7 +71,7 @@ public class Controlador {
                     while(continuar_eliminando){
                         Carrito c = simulador.get_carrito();
                         String id = interfaz.obtener_id_eliminar(c);
-                        simulador.eliminar_producto(id);
+                        simulador.eliminar_producto_t(id);
                         interfaz.producto_eliminado();
                         String s3 = "Desea seguir eliminando? (si/no): ";
                         String s4 = interfaz.solicitar_string(s3);
@@ -87,8 +87,15 @@ public class Controlador {
                     case 4:
                         interfaz.generando_factura();
                         Carrito c = simulador.get_carrito();
-                        Factura f = simulador.generar_factura();
-                        interfaz.mostrar_factura(f, c);
+                        Factura f;
+                        if(!(c.get_productos_ordenados()==null)){
+                            f = simulador.generar_factura();
+                            interfaz.mostrar_factura(f, c);
+                        }
+                        else{
+                            interfaz.mostrar_factura();
+                        }
+                        
                         String s3 = "Desea realizar una nueva compra? (si/no): ";
                         String s4 = interfaz.solicitar_string(s3);
                         s4 = s4.toLowerCase();

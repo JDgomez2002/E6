@@ -61,9 +61,9 @@ public class Carrito {
         int contador = 0;
         while((continuar)&&(contador<(this.carrito_compras.size()))){
             if(this.carrito_compras.get(contador).get_id().equals(id)){
-                String s = carrito_compras.get(contador).get_tipo_producto();
+                String s = this.carrito_compras.get(contador).get_tipo_producto();
                 producto_eliminado = s;
-                this.carrito_compras.remove(contador);
+                this.carrito_compras.remove(this.carrito_compras.get(contador));
                 continuar = false;
             }
             else{
@@ -74,6 +74,7 @@ public class Carrito {
     }
 
     public Producto[] get_productos_ordenados(){
+        ordenar_carrito();
         return this.productos_ordenados;
     }
 

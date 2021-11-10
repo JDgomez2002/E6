@@ -217,9 +217,8 @@ public class Tienda {
  * @version eliminar_producto 1.1
  * @return string
  */
-    public String eliminar_producto(String id){
-        String s = carrito_compras.eliminar_producto(id);
-        return s;
+    public void eliminar_producto_t(String id){
+        this.carrito_compras.eliminar_producto(id);
     }
 /**
  * metodo para cerrar tienda
@@ -283,9 +282,9 @@ public class Tienda {
  * @version escribir_datos_tienda 1.1
  */
     public void escribir_datos_tienda(String[] datos){
-        datos[0] = this.direccion;
-        datos[1] = this.codigo_tienda;
-        datos[2] = this.pais;
-        datos[3] = this.ciudad;
+        this.direccion = datos[0];
+        this.codigo_tienda = datos[1];
+        this.pais = datos[2];
+        this.ciudad = datos[3];
     }
 }

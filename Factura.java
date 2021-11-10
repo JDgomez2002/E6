@@ -52,7 +52,7 @@ public class Factura {
         info[1] = this.nit;
         info[2] = this.fecha;
         info[3] = this.no_factura;
-        info[4] = Integer.toString(this.monto_total);  
+        info[4] = "TOTAL: Q"+Integer.toString(this.monto_total);  
         return info;
     }
 }
