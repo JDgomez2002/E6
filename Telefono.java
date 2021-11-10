@@ -27,7 +27,12 @@ abstract class Telefono implements Producto{
     protected boolean portabilidad;
 
     abstract String llamar();
-    
+   /**
+ * metodo para el telefono
+ * 
+ * @author Grupo 9
+ * @version Telefono 1.1
+ */  
     public Telefono(String[] datos, boolean portable){
         this.tipo_producto = "Telefono";
         this.id = datos[0];
@@ -38,12 +43,24 @@ abstract class Telefono implements Producto{
         this.marcador_ar = datos[5];
         this.portabilidad = portable;
     }
-
+/**
+ * metodo para probar producto
+ * 
+ * @author Grupo 9
+ * @version tomar_foto 1.1
+ * @return string
+ */ 
     public String probar_producto(){
         String s = "El telefono "+this.serie+" de la marca "+this.marca+" se esta probando...";
         return s;
     }
-
+/**
+ * metodo to string de producto
+ * 
+ * @author Grupo 9
+ * @version to_String_producto 1.1
+ * @return string
+ */ 
     public String[] to_String_producto(){
         String[] datos = new String[7];
         datos[0] = this.id;
@@ -55,19 +72,43 @@ abstract class Telefono implements Producto{
         datos[6] = this.tipo_producto;
         return datos;
     }
-
+/**
+ * metodo get de portabilidad
+ * 
+ * @author Grupo 9
+ * @version get_portabilidad 1.1
+ * @return boolean
+ */ 
     public boolean get_portabilidad(){
         return this.portabilidad;
     }
-
+/**
+ * metodo get de tipo producto
+ * 
+ * @author Grupo 9
+ * @version get_tipo_producto 1.1
+ * @return string
+ */ 
     public String get_tipo_producto(){
         return this.tipo_producto;
     }
-
+/**
+ * metodo get id
+ * 
+ * @author Grupo 9
+ * @version get_id 1.1
+ * @return string
+ */ 
     public String get_id(){
         return this.id;
     }
-
+/**
+ * metodo get del precio
+ * 
+ * @author Grupo 9
+ * @version get_precio 1.1
+ * @return int
+ */ 
     public int get_precio(){
         int precio = 0;
         try{

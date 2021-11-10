@@ -337,7 +337,12 @@ public class Vista {
     }
 }
 }
-
+    /**
+     * Menu de telefonos celulares fijos.
+     * 
+     * @author Grupo 9
+     * @version MenuTelFijo 1.1
+     */
 private void MenuTelFijo(){
     boolean continuar = true;
     while(continuar){
@@ -373,7 +378,12 @@ private void MenuTelFijo(){
 }
     }
 }
-
+    /**
+     * Menu de camaras.
+     * 
+     * @author Grupo 9
+     * @version MenuCamara 1.1
+     */
 private void MenuCamara(){
     boolean continuar = true;
     while(continuar){
@@ -415,6 +425,12 @@ private void MenuCamara(){
 }
 }
 }
+    /**
+     * Menu de computadoras-Deskop.
+     * 
+     * @author Grupo 9
+     * @version MenuCompuDesk 1.1
+     */
 private void MenuCompuDesk(){
     boolean continuar = true;
     while(continuar){
@@ -467,6 +483,12 @@ private void MenuCompuDesk(){
 }
 }
 }
+    /**
+     * Menu de computadoras-Laptop.
+     * 
+     * @author Grupo 9
+     * @version MenuCompuLaptop 1.1
+     */
 private void MenuCompuLaptop(){
     boolean continuar = true;
     while(continuar){
@@ -519,6 +541,12 @@ private void MenuCompuLaptop(){
 }
 }
 }
+    /**
+     * Menu de televisores.
+     * 
+     * @author Grupo 9
+     * @version MenuTV 1.1
+     */
 private void MenuTV(){
     boolean continuar = true;
     while(continuar){
@@ -561,7 +589,12 @@ private void MenuTV(){
 }
 }
 }
-
+    /**
+     * Menu de tablets.
+     * 
+     * @author Grupo 9
+     * @version MenuTablet 1.1
+     */
 private void MenuTablet(){
     boolean continuar = true;
     while(continuar){
@@ -614,6 +647,12 @@ private void MenuTablet(){
 }
 }
 }
+    /**
+     * Menu de Smartwatch.
+     * 
+     * @author Grupo 9
+     * @version MenuSmartwatch 1.1
+     */
 private void MenuSmartwatch(){
     boolean continuar = true;
     while(continuar){
@@ -673,7 +712,13 @@ public void despedida(){
     System.out.println();
     System.out.println("---------------------------------------------------------------------------------------------------------------------");
 }
-
+    /**
+     * Metodo para agregar producto por id.
+     * 
+     * @author Grupo 9
+     * @version obtener_id 1.1
+     * @return String
+     */
 public String obtener_id(Carrito c){
     System.out.println();
     System.out.println("---------------------------------------------------------------------------------------------------------------------");
@@ -723,7 +768,13 @@ public String obtener_id(Carrito c){
     }
     return id;
 }
-
+    /**
+     * Metodo para eliminar producto por id.
+     * 
+     * @author Grupo 9
+     * @version obtener_id_eliminar 1.1
+     * @return String
+     */
 public String obtener_id_eliminar(Carrito c){
     System.out.println();
     System.out.println("---------------------------------------------------------------------------------------------------------------------");
@@ -773,19 +824,34 @@ public String obtener_id_eliminar(Carrito c){
     }
     return id;
 }
-
+    /**
+     * Mensaje para agregar un producto al carro.
+     * 
+     * @author Grupo 9
+     * @version producto_agregado 1.1
+     */
 public void producto_agregado(){
     System.out.println();
     System.out.println("\tProducto agregado al carrito correctamente!");
     System.out.println();
 }
-
+    /**
+     * Mensaje para eliminar un producto al carro.
+     * 
+     * @author Grupo 9
+     * @version producto_eliminado 1.1
+     */
 public void producto_eliminado(){
     System.out.println();
     System.out.println("\tProducto eliminado del carrito correctamente!");
     System.out.println();
 }
-
+    /**
+     * Metodo para mostrar carrito
+     * 
+     * @author Grupo 9
+     * @version mostrar_carrito 1.1
+     */
 private void mostrar_carrito(Carrito c){ //ERROOOOOOOOOOOOOOOR
     Producto[] productos = c.get_productos_ordenados();
     // for(int k = 0; k<productos.length ;k++){
@@ -816,19 +882,34 @@ private void mostrar_carrito(Carrito c){ //ERROOOOOOOOOOOOOOOR
         System.out.println();
     }
 }
-
+    /**
+     * Mensaje para volver al menu
+     * 
+     * @author Grupo 9
+     * @version volviendo_al_menu 1.1
+     */
 public void volviendo_al_menu(){
     System.out.println();
     System.out.println("\tVolviendo al Menu...");
     System.out.println();
 }
-
+    /**
+     * Mensaje para generar factura
+     * 
+     * @author Grupo 9
+     * @version generando_factura 1.1
+     */
 public void generando_factura(){
     System.out.println();
     System.out.println("\tgenerando factura...");
     System.out.println();
 }
-
+    /**
+     * Metodo para mostrar factura
+     * 
+     * @author Grupo 9
+     * @version mostrar_factura 1.1
+     */
 public void mostrar_factura(Factura f, Carrito c){
     String[] datos = f.get_info_factura();
     System.out.println();
@@ -840,7 +921,13 @@ public void mostrar_factura(Factura f, Carrito c){
     mostrar_carrito(c);
     System.out.println();
 }
-
+    /**
+     * Metodo para solicitar datos a  tienda
+     * 
+     * @author Grupo 9
+     * @version solicitar_datos_tienda 1.1
+     * @return string
+     */
 public String[] solicitar_datos_tienda(){
     String[] datos = new String[4];
     System.out.println();
@@ -859,7 +946,13 @@ public String[] solicitar_datos_tienda(){
     return datos;
 
 }
-
+    /**
+     * Metodo para mostrar datos de la tienda
+     * 
+     * @author Grupo 9
+     * @version mostrar_info_tienda 1.1
+     * @return string
+     */
 public void mostrar_info_tienda(Tienda t){
     String[] info = t.get_info_tienda();
     System.out.println("-- Informacion de la tienda --");

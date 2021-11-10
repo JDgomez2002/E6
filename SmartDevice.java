@@ -29,7 +29,12 @@ abstract class SmartDevice implements Producto{
     abstract String navegar_internet();
 
     abstract String reproducir_video();
-    
+/**
+ * metodo solicitar datos del smartDevice
+ * 
+ * @author Grupo 9
+ * @version SmartDevice 1.1
+ */  
     public SmartDevice(String[] datos, boolean portable){
         this.tipo_producto = "Smart_device";
         this.id = datos[0];
@@ -40,12 +45,23 @@ abstract class SmartDevice implements Producto{
         this.marcador_ar = datos[5];
         this.portabilidad = portable;
     }
-
+/**
+ * metodo para probar productos
+ * 
+ * @author Grupo 9
+ * @version probar_producto 1.1
+ */
     public String probar_producto(){
         String s = "El dispositivo "+this.serie+" de la marca "+this.marca+" se esta probando...";
         return s;
     }
-
+/**
+ * metodo to string de productos
+ * 
+ * @author Grupo 9
+ * @version to_String_producto 1.1
+ * @return string
+ */
     public String[] to_String_producto(){
         String[] datos = new String[7];
         datos[0] = this.id;
@@ -57,19 +73,43 @@ abstract class SmartDevice implements Producto{
         datos[6] = this.tipo_producto;
         return datos;
     }
-
+/**
+ * metodo get para portabilidad
+ * 
+ * @author Grupo 9
+ * @version get_portabilidad 1.1
+ * @return boolean 
+ */
     public boolean get_portabilidad(){
         return this.portabilidad;
     }
-
+/**
+ * metodo get para el tipo de producto
+ * 
+ * @author Grupo 9
+ * @version get_tipo_producto 1.1
+ * @return string
+ */
     public String get_tipo_producto(){
         return this.tipo_producto;
     }
-
+/**
+ * metodo get para el id
+ * 
+ * @author Grupo 9
+ * @version get_id 1.1
+ * @return string
+ */
     public String get_id(){
         return this.id;
     }
-
+/**
+ * metodo get para el precio
+ * 
+ * @author Grupo 9
+ * @version get_precio 1.1
+ * @return int
+ */
     public int get_precio(){
         int precio = 0;
         try{

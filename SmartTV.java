@@ -17,17 +17,34 @@
  * @version SmartTV Class 1.1
  */
 public class SmartTV extends SmartDevice{
-    
+ /**
+ * metodo para los datos de la smarttv
+ * 
+ * @author Grupo 9
+ * @version SmartTV 1.1
+ */   
     public SmartTV(String[] datos){
         super(datos, false);
         this.tipo_producto = "Smart TV";
     }
-
+/**
+ * metodo para navegar por internet
+ * 
+ * @author Grupo 9
+ * @version navegar_internet 1.1
+ * @return string
+ */  
     public String navegar_internet(){
         String s = "Se esta navegando en internet con la Smart TV en el link: ";
         return s;
     }
-    
+ /**
+ * metodo para reproducir video
+ * 
+ * @author Grupo 9
+ * @version reproducir_video 1.1
+ * @return string
+ */     
     public String reproducir_video(){
         String s = "Se esta reproduciendo video con la Smart TV...";
         return s;

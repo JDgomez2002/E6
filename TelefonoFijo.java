@@ -17,12 +17,23 @@
  * @version TelefonoFijo Class 1.1
  */
 public class TelefonoFijo extends Telefono{
-
+/**
+ * metodo para datos del telefono fijo
+ * 
+ * @author Grupo 9
+ * @version TelefonoFijo 1.1
+ */ 
     public TelefonoFijo(String[] datos){
         super(datos, false);
         this.tipo_producto = "Telefono Fijo";
     }
-
+/**
+ * metodo para llamar
+ * 
+ * @author Grupo 9
+ * @version llamar 1.1
+ * @return string
+ */ 
     public String llamar(){
         String s = "Se esta llamando con el SmartPhone al numero: ";
         return s;
